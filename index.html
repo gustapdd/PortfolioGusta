@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Gusta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="https://wa.me/5562993127663">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Meu nome é Gustavo Neres, e sou um Desenvolvedor e Designer Gráfico com mais de 1 anos de experiência em criar soluções web inovadoras. Tenho uma paixão por desenvolver aplicações que resolvam problemas reais e que melhorem a vida das pessoa. Minha jornada no mundo da tecnologia começou com um amor pela programação e evoluiu para uma carreira focada em desenvolver aplicações web escaláveis e robustas. Trabalhei em diversos projetos, desde leading pages a canais do youtube como thumbnaker, e adquiri habilidades em JavaScript, HTML. Atualmente, estou focado em aprimorar minhas habilidades em Leading Page e estou buscando oportunidades que me permitam aplicar essas habilidades em projetos de impacto. Fora do trabalho, gosto de jogos. Quando não estou codificando, você pode me encontrar Jogando, pesquisando sobre tecnologia, ou jogando futebol com amigos. Se você está interessado em colaborar ou apenas quer dizer olá, sinta-se à vontade para me contatar!  <p>
+
+            <section id="projects">
+                <h2>Meus Projetos</h2>
+
+                <div class="project">
+                    <h3>Projeto 1</h3>
+                    <button onclick="showImage('image1')">Ver Imagem do Projeto 1</button>
+                    <img id="image1" src="imagens/5100811987067186416.jpg" alt="Descrição do Projeto 1" style="display: none; width: 300px; height: auto; display: block; margin: 0 auto;">
+                    <p>Uma Thumbanail bastante usada em vídeos de Fortnite, mas também faço outro estilos de jogos.</p>
+                </div>
+
+            <div class="project">
+                <h3>Projeto 2</h3>
+                <button onclick="showVideo('video2')">Ver Vídeo do Projeto 2</button>
+                <video id="video2" class="project-video" style="display: none;" controls>
+                    <source src="imagens/telatuichi.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <p>Orveley bastante utilizado em live stream, para chamar mais a atençao e deixar a live mais bonita.</p>
+            </div>
+            </section>
+
+            <script>
+            function showVideo(videoId) {
+                var video = document.getElementById(videoId);
+                if (video.style.display === "none") {
+                    video.style.display = "block";
+                } else {
+                    video.style.display = "none";
+                }
+            }
+            </script>
+
+            <style>
+            .project-video {
+                width: 300px; 
+                height: auto; 
+                display: block;
+                margin: 0 auto;
+            }
+            </style>
+
+            <script>
+                function showImage(imageId) {
+                    var image = document.getElementById(imageId);
+                    if (image.style.display === "none") {
+                        image.style.display = "block";
+                    } else {
+                        image.style.display = "none";
+                    }
+                }
+            </script>
+
+
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Designer Gráfico</li>
+                <li>Progamador</li>
+                <li>Thumbnaker</li>
+
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contato</h2>
+            <form action="mailto:gustavo.ssousa.moura@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&#128573; PORTFÓLIO</p>
+    </footer>
+</body>
+</html>
